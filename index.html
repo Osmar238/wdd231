@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 Course Home Page - Web Frontend Development assignment showcasing responsive design and JS proficiency.">
+    <meta name="author" content="Osmar Arevalo Molina">
+    
+    <title>WDD 231 - Course Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css"> 
+    <link rel="stylesheet" href="styles/layout.css"> <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="WDD 231 Course Logo" width="50" height="50">
+            <span>Osmar Arevalo Molina</span>
+        </div>
+        
+        <a id="menu" href="#" aria-label="Menu"></a>
+        
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/Osmar238/wdd231" target="_blank">GitHub Profile</a></li>
+            </ul> </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="about-grid">
+            <div class="about-card">
+                <h2>About Me</h2>
+                <p>"I’m Osmar Arevalo, a Software Development student from Tamaulipas, Mexico. I enjoy the logic behind programming, from solving calculus problems to creating interactive websites using HTML, CSS, and JavaScript. Beyond coding, I am passionate about video editing for social media and I love to sing. I believe that creativity is key to great software development, and I am excited to apply that creativity in WDD 231."</p>
+            </div>
+            <div class="photo-card">
+                <h2>Student Photo</h2>
+                <img src="images/osmar-arevalo.jpg" alt="Student Photo Placeholder">
+            </div>
+        </section>
+        
+        <section class="courses-section">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filter-buttons">
+                <button id="all" class="active">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+    
+            <div class="course-grid"></div>
+    
+            <p class="total-credits">The total credits for course listed above is <span id="total-credits">0</span></p>
+        </section>
+
+        </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> | 
+            Osmar Arevalo Molina | 
+            Tamaulipas México
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
