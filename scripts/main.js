@@ -1,7 +1,3 @@
-// --- 1. VARIABLES GLOBALES Y DATOS ---
-
-// Este es el array de cursos (Lo que pedían las instrucciones).
-// IMPORTANTE: Cambia 'completed: true' o 'false' según tu progreso real.
 const courses = [
     {
         subject: 'CSE',
@@ -82,7 +78,6 @@ const courses = [
     }
 ];
 
-// --- 2. FUNCIONALIDAD DEL MENÚ HAMBURGUESA ---
 
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
@@ -92,36 +87,25 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
-// --- 3. FUNCIONALIDAD DEL FOOTER (FECHAS) ---
 
-// Año actual
 document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 
-// Última modificación
 document.getElementById("lastModified").innerHTML = "Last Modification: " + document.lastModified;
-
-
-// --- 4. FUNCIONALIDAD DE LOS CURSOS (MOSTRAR Y FILTRAR) ---
 
 const courseContainer = document.querySelector('.course-grid');
 const totalCreditsSpan = document.querySelector('#total-credits');
 
-// Función para mostrar los cursos en el HTML
 function displayCourses(courseList) {
-    // Limpiamos el contenedor por si había algo antes
     courseContainer.innerHTML = '';
 
     courseList.forEach(course => {
-        // Creamos la tarjeta (div)
         const card = document.createElement('div');
         card.classList.add('course-card');
 
-        // Si el curso está completado, añadimos una clase especial para CSS
         if (course.completed) {
             card.classList.add('completed');
         }
 
-        // Insertamos el contenido HTML dentro de la tarjeta
         card.innerHTML = `
             <h3>${course.subject} ${course.number}</h3>
             <p>${course.title}</p>
@@ -129,33 +113,26 @@ function displayCourses(courseList) {
             <p><strong>Tech:</strong> ${course.technology.join(', ')}</p>
         `;
 
-        // Agregamos la tarjeta al contenedor principal
         courseContainer.appendChild(card);
     });
     
-    // Calculamos el total de créditos de los cursos mostrados usando .reduce()
     const totalCredits = courseList.reduce((total, course) => total + course.credits, 0);
     totalCreditsSpan.textContent = totalCredits;
 }
 
-// --- 5. EVENT LISTENERS PARA LOS BOTONES DE FILTRO ---
 
 document.querySelector('#all').addEventListener('click', () => {
     displayCourses(courses);
 });
 
 document.querySelector('#cse').addEventListener('click', () => {
-    // Usamos .filter() para obtener solo los de CSE
     const cseCourses = courses.filter(course => course.subject === 'CSE');
     displayCourses(cseCourses);
 });
 
 document.querySelector('#wdd').addEventListener('click', () => {
-    // Usamos .filter() para obtener solo los de WDD
     const wddCourses = courses.filter(course => course.subject === 'WDD');
     displayCourses(wddCourses);
 });
 
-// --- 6. INICIALIZACIÓN ---
-// Mostramos todos los cursos al cargar la página por primera vez
 displayCourses(courses);

@@ -4,7 +4,7 @@
     --accent-color: #e0f2f1;
     --text-color: #333333;
     --white: #ffffff;
-    --card-bg: #f4f4f4; /* Color de fondo gris claro para las tarjetas */
+    --card-bg: #f4f4f4; 
     --heading-font: 'Roboto', sans-serif;
     --paragraph-font: 'Roboto', sans-serif;
 }
@@ -102,7 +102,6 @@ h1 {
     margin-bottom: 1rem;
 }
 
-/* --- NUEVOS ESTILOS PARA LA SECCIÓN ABOUT --- */
 .about-grid {
     display: grid;
     gap: 1rem;
@@ -116,10 +115,10 @@ h1 {
 }
 
 .about-card h2, .photo-card h2 {
-    background-color: var(--text-color); /* Barra de título oscura */
+    background-color: var(--text-color); 
     color: var(--white);
     padding: 0.5rem;
-    margin: -1rem -1rem 1rem -1rem; /* Expandir el fondo del título */
+    margin: -1rem -1rem 1rem -1rem; 
     font-size: 1.2rem;
     text-align: center;
 }
@@ -128,11 +127,10 @@ h1 {
     width: 100%;
     height: auto;
     display: block;
-    background-color: #ccc; /* Placeholder color */
-    min-height: 200px; /* Altura mínima para el placeholder */
+    background-color: #ccc;
+    min-height: 200px;
 }
 
-/* --- ESTILOS DE CURSOS --- */
 .courses-section h2 {
     background-color: var(--text-color);
     color: var(--white);
@@ -143,7 +141,7 @@ h1 {
 
 .filter-buttons {
     display: flex;
-    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas muy pequeñas */
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 10px;
     margin-bottom: 1rem;
@@ -157,7 +155,7 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    flex: 1 1 auto; /* Botones flexibles */
+    flex: 1 1 auto; 
     max-width: 150px;
 }
 
@@ -174,7 +172,7 @@ h1 {
 }
 
 .course-card {
-    background-color: var(--card-bg); /* Usar el mismo gris claro */
+    background-color: var(--card-bg); 
     border: 1px solid #ddd;
     padding: 1rem;
     border-radius: 8px;
@@ -199,7 +197,7 @@ h1 {
 }
 
 footer {
-    background-color: var(--card-bg); /* Fondo gris claro para footer */
+    background-color: var(--card-bg); 
     color: var(--text-color);
     text-align: center;
     padding: 2rem 1rem;
@@ -229,10 +227,10 @@ footer p {
 }
 
 .courses-section h2 {
-    background-color: var(--text-color); /* Fondo gris oscuro/negro */
-    color: var(--white);                 /* Letras blancas */
+    background-color: var(--text-color); 
+    color: var(--white);                
     padding: 0.5rem;
     text-align: center;
     margin-bottom: 1rem;
-    border-radius: 4px; /* Un pequeño borde redondeado para que se vea pulido */
+    border-radius: 4px;
 }
