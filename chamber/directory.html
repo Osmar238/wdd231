@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Directory - NYC Chamber</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="NYC Chamber Logo">
+            <h1>NYC Chamber of Commerce</h1>
+            <button id="menu-toggle">☰</button>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li> <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="directory-main">
+        <h2>Business Directory</h2>
+        
+        <div class="menu-controls">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+
+        <article id="members-container" class="grid-mode">
+            </article>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> NYC Chamber</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/main.js"></script> <script src="scripts/members.js"></script> </body>
+</html>

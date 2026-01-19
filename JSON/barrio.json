@@ -1,0 +1,31 @@
+{
+    "Familia": "Arevalo",
+    "Fecha en que se mudó al barrio": "13-05-2003",
+    "integrantes de la familia": 4,
+    "¿Los visita el obispado?": true,
+    "Datos de integrantes": [
+        {
+            "nombre": "Alfredo",
+            "edad": 55,
+            "genero": "hombre"
+        },
+        {
+            "nombre": "Deisy",
+            "edad": "50",
+            "genero": "mujer"
+        },
+        {
+            "nombre": "Osmar",
+            "edad": "22",
+            "genero": "hombre"
+        },
+        {
+            "nombre": "Razhiel",
+            "edad": "24",
+            "genero": "hombre"
+        }
+    ]
+
+
+
+}

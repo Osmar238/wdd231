@@ -1,0 +1,65 @@
+[
+  {
+    "names": "Joe's Pizza",
+    "address": "7 Carmine St, New York, NY 10014",
+    "phone": "(212) 366-1182",
+    "website": "https://www.joespizzany.com",
+    "image": "images/joes-pizza.jpg",
+    "membershipLevel": 1,
+    "otherInfo": "La auténtica rebanada de Nueva York."
+  },
+  {
+    "names": "Empire State Realty",
+    "address": "350 5th Ave, New York, NY 10118",
+    "phone": "(212) 736-3100",
+    "website": "https://www.esbnyc.com",
+    "image": "images/empire-state.jpg",
+    "membershipLevel": 3,
+    "otherInfo": "Icono de la arquitectura y bienes raíces."
+  },
+  {
+    "names": "Broadway Tickets Co.",
+    "address": "1681 Broadway, New York, NY 10019",
+    "phone": "(212) 541-8457",
+    "website": "https://www.broadway.com",
+    "image": "images/broadway.png",
+    "membershipLevel": 2,
+    "otherInfo": "La mejor experiencia teatral del mundo."
+  },
+  {
+    "names": "Wall Street Financial",
+    "address": "11 Wall St, New York, NY 10005",
+    "phone": "(212) 656-3000",
+    "website": "https://www.nyse.com",
+    "image": "images/wall-street.png",
+    "membershipLevel": 3,
+    "otherInfo": "Líderes en inversiones globales."
+  },
+  {
+    "names": "NYC Public Library",
+    "address": "476 5th Ave, New York, NY 10018",
+    "phone": "(917) 275-6975",
+    "website": "https://www.nypl.org",
+    "image": "images/nypl.png",
+    "membershipLevel": 1,
+    "otherInfo": "Conocimiento gratuito para todos."
+  },
+  {
+    "names": "Central Park Conservancy",
+    "address": "14 E 60th St, New York, NY 10022",
+    "phone": "(212) 310-6600",
+    "website": "https://www.centralparknyc.org",
+    "image": "images/central-park.png",
+    "membershipLevel": 2,
+    "otherInfo": "Preservando el pulmón verde de la ciudad."
+  },
+  {
+    "names": "MoMA The Museum of Modern Art",
+    "address": "11 W 53rd St, New York, NY 10019",
+    "phone": "(212) 708-9400",
+    "website": "https://www.moma.org",
+    "image": "images/moma.png",
+    "membershipLevel": 3,
+    "otherInfo": "Arte moderno e inspirador."
+  }
+]
