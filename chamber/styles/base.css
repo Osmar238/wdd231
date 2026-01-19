@@ -1,9 +1,7 @@
-/* =========================================
-   1. VARIABLES Y RESET GENERAL
-   ========================================= */
+
 :root {
-    --primary-color: #003366; /* Azul Policía/Institucional */
-    --secondary-color: #FFCC00; /* Amarillo Taxi */
+    --primary-color: #003366; 
+    --secondary-color: #FFCC00; 
     --text-dark: #333333;
     --text-light: #ffffff;
     --bg-light: #f4f4f4;
@@ -22,9 +20,6 @@ body {
     line-height: 1.6;
 }
 
-/* =========================================
-   2. ENCABEZADO (HEADER) - Estilo NYC
-   ========================================= */
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -41,7 +36,6 @@ header {
     gap: 15px;
 }
 
-/* Logo del header */
 header img {
     width: 60px;
     height: auto;
@@ -53,27 +47,23 @@ header h1 {
     margin: 0;
 }
 
-/* Botón Hamburguesa */
 #menu-toggle {
     font-size: 2rem;
     background: none;
     border: none;
     color: var(--text-light);
     cursor: pointer;
-    display: block; /* Visible en móvil */
+    display: block; 
 }
 
-/* =========================================
-   3. NAVEGACIÓN (NAV)
-   ========================================= */
 nav {
     position: absolute;
     top: 80px;
     left: 0;
     width: 100%;
     background-color: #002244;
-    display: none; /* Oculto por defecto */
-    z-index: 1000; /* Para que flote sobre el contenido */
+    display: none; 
+    z-index: 1000; 
 }
 
 nav.open {
@@ -98,9 +88,6 @@ nav ul li a:hover, nav ul li a.active {
     color: var(--text-dark);
 }
 
-/* =========================================
-   4. CONTENIDO PRINCIPAL (MAIN)
-   ========================================= */
 main {
     max-width: 1200px;
     margin: 20px auto;
@@ -113,9 +100,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* =========================================
-   5. BOTONES DE CONTROL (GRID/LIST)
-   ========================================= */
 .menu-controls {
     margin: 1rem 0;
     text-align: center;
@@ -139,21 +123,17 @@ h2 {
     color: white;
 }
 
-/* =========================================
-   6. ESTILOS DE TARJETAS (La parte que faltaba)
-   ========================================= */
-/* Estilos generales de la tarjeta (Card) */
+
 #members-container section {
     background-color: white;
     border: 1px solid #ddd;
     margin: 0.5rem;
     padding: 1.5rem;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
     text-align: center;
 }
 
-/* Estilos de la imagen dentro de la tarjeta */
 #members-container img {
     max-width: 100px;
     height: auto;
@@ -163,7 +143,6 @@ h2 {
     margin-right: auto;
 }
 
-/* Estilos del texto */
 #members-container h3 {
     color: var(--primary-color);
     margin-bottom: 10px;
@@ -190,18 +169,13 @@ h2 {
     color: white;
 }
 
-/* =========================================
-   7. LÓGICA GRID vs LISTA
-   ========================================= */
 
-/* --- MODO GRID (Cuadrícula) --- */
 .grid-mode {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
-/* --- MODO LISTA (Filas) --- */
 .list-mode {
     display: flex;
     flex-direction: column;
@@ -210,7 +184,7 @@ h2 {
 
 .list-mode section {
     display: grid;
-    grid-template-columns: 80px 1fr 1fr; /* Logo | Info | Link */
+    grid-template-columns: 80px 1fr 1fr; 
     align-items: center;
     text-align: left;
     padding: 1rem;
@@ -225,9 +199,6 @@ h2 {
     margin-bottom: 0;
 }
 
-/* =========================================
-   8. FOOTER
-   ========================================= */
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -242,16 +213,13 @@ footer {
     font-size: 0.9rem;
 }
 
-/* =========================================
-   9. MEDIA QUERIES (Pantallas Grandes)
-   ========================================= */
 @media (min-width: 768px) {
     #menu-toggle {
         display: none;
     }
 
     header {
-        flex-direction: row; /* Horizontal */
+        flex-direction: row;
         padding: 0 2rem;
     }
     
@@ -270,7 +238,7 @@ footer {
     nav ul li a {
         padding: 1.5rem 1rem;
         border-bottom: none;
-        border-top: 4px solid transparent; /* Para efecto hover */
+        border-top: 4px solid transparent;
     }
 
     nav ul li a:hover, nav ul li a.active {
