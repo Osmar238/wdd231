@@ -1,0 +1,78 @@
+/* 1. Reseteo básico y fuente bonita */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Un fondo degradado azul/cian que recuerda al cielo */
+    background: linear-gradient(135deg, #00f260, #0575E6);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Estilo para el título principal fuera de la tarjeta */
+h1 {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* 3. La "Tarjeta" donde va la información (Main) */
+main {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Sombra elegante */
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+}
+
+/* 4. Texto de la temperatura y ciudad */
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#town {
+    font-weight: bold;
+    color: #0575E6; /* Azul para resaltar la ciudad */
+}
+
+#current-temp {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* 5. Figura e Icono */
+figure {
+    margin: 20px 0 0 0;
+}
+
+#weather-icon {
+    width: 100px; /* Hacemos el icono un poco más grande */
+    height: 100px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); /* Sombra suave al icono */
+}
+
+figcaption {
+    text-transform: capitalize; /* Convierte "scattered clouds" en "Scattered Clouds" */
+    font-style: italic;
+    color: #666;
+    margin-top: -10px;
+}
+
+/* 6. Pie de página */
+footer {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    text-align: center;
+}
