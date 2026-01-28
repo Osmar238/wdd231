@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #003366; 
     --secondary-color: #FFCC00; 
@@ -20,6 +19,7 @@ body {
     line-height: 1.6;
 }
 
+/* --- HEADER & NAV (Mobile Default) --- */
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -66,81 +66,6 @@ nav {
     z-index: 1000; 
 }
 
-/* --- Hero & CTA --- */
-.hero {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.hero .img-hero {
-    width: 100%;
-    height: auto;
-    display: block;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.hero-text {
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    /* Truco para poner texto sobre la imagen en móvil si quieres, 
-       o dejarlo debajo. Por ahora lo dejamos como bloque separado o superpuesto: */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    border-radius: 10px;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--secondary-color); /* Amarillo */
-    color: var(--text-dark);
-    padding: 15px 30px;
-    margin-top: 15px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #e6b800; /* Un amarillo un poco más oscuro */
-}
-
-/* --- Cards (Eventos, Clima, Spotlights) --- */
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-/* Spotlights en móvil: uno debajo del otro */
-.spotlights-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.spotlight-card { /* Esta clase la generaremos con JS */
-    border: 1px solid #ccc;
-    padding: 15px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
 nav.open {
     display: block;
 }
@@ -163,34 +88,107 @@ nav ul li a:hover, nav ul li a.active {
     color: var(--text-dark);
 }
 
+/* --- MAIN LAYOUT --- */
 main {
     max-width: 1200px;
     margin: 20px auto;
     padding: 1rem;
 }
 
-.img_hero{
-    width: 700px;
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.hero .img-hero {
+    width: 100%;
     height: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.home{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.text_home{
-    margin: 0px;
-    font-size: 24px;
-}
-
-h2 {
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #ffffff; /* ARREGLO AUDITORÍA: Texto blanco explícito */
+    padding: 1rem;
     text-align: center;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 10px;
 }
 
+.hero-text h2, 
+.hero-text p {
+    color: #ffffff; /* Asegura contraste */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color); 
+    color: var(--text-dark);
+    padding: 15px 30px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e6b800; 
+}
+
+/* --- CARDS & SPOTLIGHTS (Mobile) --- */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Layout vertical para móvil */
+.spotlights-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+}
+
+.spotlight-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 4px solid var(--secondary-color);
+}
+
+#lastModified {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* --- DIRECTORY PAGE STYLES --- */
 .menu-controls {
     margin: 1rem 0;
     text-align: center;
@@ -214,7 +212,6 @@ h2 {
     color: white;
 }
 
-
 #members-container section {
     background-color: white;
     border: 1px solid #ddd;
@@ -230,36 +227,8 @@ h2 {
     height: auto;
     margin-bottom: 15px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
-
-#members-container h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-#members-container p {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
-
-#members-container a {
-    display: inline-block;
-    margin-top: 10px;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid var(--primary-color);
-    padding: 5px 10px;
-    border-radius: 4px;
-}
-
-#members-container a:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
 
 .grid-mode {
     display: grid;
@@ -279,62 +248,4 @@ h2 {
     align-items: center;
     text-align: left;
     padding: 1rem;
-}
-
-.list-mode section img {
-    margin-bottom: 0;
-    max-width: 60px;
-}
-
-.list-mode section h3 {
-    margin-bottom: 0;
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    border-top: 4px solid var(--secondary-color);
-}
-
-#lastModified {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-}
-
-@media (min-width: 768px) {
-    #menu-toggle {
-        display: none;
-    }
-
-    header {
-        flex-direction: row;
-        padding: 0 2rem;
-    }
-    
-    nav {
-        position: static;
-        display: block;
-        background-color: transparent;
-        width: auto;
-    }
-
-    nav ul {
-        display: flex;
-        gap: 20px;
-    }
-
-    nav ul li a {
-        padding: 1.5rem 1rem;
-        border-bottom: none;
-        border-top: 4px solid transparent;
-    }
-
-    nav ul li a:hover, nav ul li a.active {
-        background-color: transparent;
-        border-top: 4px solid var(--secondary-color);
-        color: var(--secondary-color);
-    }
 }

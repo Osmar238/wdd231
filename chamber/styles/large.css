@@ -1,28 +1,63 @@
-/* --- Grid Layout para Desktop --- */
+/* --- MENU DE ESCRITORIO --- */
+/* Ocultamos botón hamburguesa */
+#menu-toggle {
+    display: none;
+}
+
+header {
+    flex-direction: row;
+    padding: 0 2rem;
+}
+
+nav {
+    position: static;
+    display: block;
+    background-color: transparent;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    padding: 1.5rem 1rem;
+    border-bottom: none;
+    border-top: 4px solid transparent;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: transparent;
+    border-top: 4px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* --- GRID LAYOUT PARA HOME (Escritorio) --- */
 .main-grid {
     display: grid;
     /* 3 columnas: 2 para contenido principal, 1 para barra lateral */
     grid-template-columns: 2fr 1fr; 
     gap: 20px;
-    align-items: start; /* Alinea los items arriba */
+    align-items: start; 
 }
 
 /* Ubicación de las secciones en la grilla */
 .events {
-    grid-column: 2 / 3; /* Columna derecha */
+    grid-column: 2 / 3; 
     grid-row: 1 / 2;
 }
 
 .weather {
-    grid-column: 2 / 3; /* Columna derecha */
+    grid-column: 2 / 3; 
     grid-row: 2 / 3;
 }
 
 .spotlights-container {
-    grid-column: 1 / 2; /* Columna izquierda grande */
-    grid-row: 1 / 3;    /* Ocupa la altura de las dos otras secciones */
+    grid-column: 1 / 2; 
+    grid-row: 1 / 3; 
     
-    /* Hacemos que los spotlights se pongan uno al lado del otro en desktop */
+    /* Cambiamos a horizontal */
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
@@ -30,5 +65,5 @@
 }
 
 .spotlight-card {
-    width: 45%; /* Para que quepan dos tarjetas lado a lado */
+    width: 45%; 
 }
