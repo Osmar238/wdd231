@@ -62,3 +62,14 @@ nav ul li a:hover, nav ul li a.active {
 .spotlight-card {
     width: 45%; 
 }
+
+.join-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 3rem;
+    align-items: start;
+}
+
+.membership-cards {
+    margin-top: 0;
+}

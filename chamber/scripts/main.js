@@ -195,3 +195,46 @@ if (spotlightContainer) {
 
     fetchWeather();
 }
+
+const joinForm = document.querySelector('#timestamp');
+
+if (joinForm) {
+    document.querySelector('#timestamp').value = new Date().toISOString();
+
+
+    const modals = [
+        { btn: '#np-btn', modal: '#np-modal' },
+        { btn: '#bronze-btn', modal: '#bronze-modal' },
+        { btn: '#silver-btn', modal: '#silver-modal' },
+        { btn: '#gold-btn', modal: '#gold-modal' }
+    ];
+
+    modals.forEach(item => {
+        const btn = document.querySelector(item.btn);
+        const modal = document.querySelector(item.modal);
+        const closeBtn = modal.querySelector('.close-modal');
+
+
+        btn.addEventListener('click', () => {
+            modal.showModal();
+        });
+
+
+        closeBtn.addEventListener('click', () => {
+            modal.close();
+        });
+    });
+}
+
+const resultsContainer = document.querySelector('#results-fname');
+
+if (resultsContainer) {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    document.querySelector('#results-fname').textContent = urlParams.get('fname');
+    document.querySelector('#results-lname').textContent = urlParams.get('lname');
+    document.querySelector('#results-email').textContent = urlParams.get('email');
+    document.querySelector('#results-phone').textContent = urlParams.get('phone');
+    document.querySelector('#results-org').textContent = urlParams.get('org');
+    document.querySelector('#results-timestamp').textContent = urlParams.get('timestamp');
+}
