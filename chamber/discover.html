@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - NYC Chamber of Commerce</title>
+    <meta name="description" content="Discover the demographics and interesting places in New York City.">
+    <meta name="author" content="Osmar Arevalo Molina">
+    
+    <link rel="icon" href="images/logo.png">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1025px)">
+
+    <script type="module" src="scripts/discover.js"></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="NYC Chamber Logo">
+            <h1>NYC Chamber of Commerce</h1>
+            <button id="menu-toggle">☰</button>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li> 
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover-main">
+        <div class="sidebar">
+            <div id="visit-message" class="visit-card">
+                </div>
+            
+            <div class="stats-card">
+                <h3>Demographics</h3>
+                <p>Population: 8.4 Million</p>
+                <p>Language: English, Spanish</p>
+                <p>Currency: USD ($)</p>
+            </div>
+        </div>
+
+        <div id="places-grid" class="places-grid">
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> NYC Chamber</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

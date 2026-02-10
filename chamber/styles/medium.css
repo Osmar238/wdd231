@@ -1,0 +1,30 @@
+
+.place-card:nth-child(1) { grid-area: c1; }
+.place-card:nth-child(2) { grid-area: c2; }
+.place-card:nth-child(3) { grid-area: c3; }
+.place-card:nth-child(4) { grid-area: c4; }
+.place-card:nth-child(5) { grid-area: c5; }
+.place-card:nth-child(6) { grid-area: c6; }
+.place-card:nth-child(7) { grid-area: c7; }
+.place-card:nth-child(8) { grid-area: c8; }
+
+.places-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr; 
+    
+    grid-template-areas:
+        "c1 c2"
+        "c3 c3" 
+        "c4 c5"
+        "c6 c7"
+        "c8 c8";
+}
+
+.place-card:nth-child(3) img, 
+.place-card:nth-child(8) img {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    object-fit: cover;
+}

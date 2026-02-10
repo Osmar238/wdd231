@@ -73,3 +73,44 @@ nav ul li a:hover, nav ul li a.active {
 .membership-cards {
     margin-top: 0;
 }
+
+.discover-main {
+    grid-template-columns: 250px 1fr;
+    align-items: start;
+}
+
+.places-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    
+
+    grid-template-areas: 
+        "c1 c2 c3"
+        "c4 c5 c6"
+        "c7 c8 .";
+}
+
+.place-card:nth-child(3) img, 
+.place-card:nth-child(8) img {
+    height: auto;
+    max-width: 100%;
+}
+
+.place-card figure {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.place-card img {
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.place-card:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.place-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}

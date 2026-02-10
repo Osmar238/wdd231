@@ -46,4 +46,58 @@
         <p id="lastModified"></p>
     </footer>
 </body>
-</html>
+</html>// Import the data (note the ../ to go up one folder)
+import { places } from '../data/places.mjs';
+
+// 1. GENERATE PLACE CARDS
+const placesContainer = document.querySelector('#places-grid');
+
+function displayPlaces(placesList) {
+    placesList.forEach(place => {
+        const card = document.createElement('div');
+        card.classList.add('place-card');
+        
+        card.innerHTML = `
+            <h2>${place.name}</h2>
+            <figure>
+                <img src="${place.image}" alt="${place.name}" loading="lazy" width="300" height="200">
+            </figure>
+            <address>${place.address}</address>
+            <p>${place.description}</p>
+            <button>Learn More</button>
+        `;
+        
+        placesContainer.appendChild(card);
+    });
+}
+
+// Run the function
+displayPlaces(places);
+
+
+// 2. VISIT MESSAGE (LocalStorage)
+const visitMessage = document.querySelector('#visit-message');
+const msToDays = 84600000; // Milliseconds in a day
+const now = Date.now();
+
+let lastVisit = window.localStorage.getItem('lastVisit-ls');
+
+if (!lastVisit) {
+    // First visit
+    visitMessage.innerHTML = `<p>Welcome! Let us know if you have any questions.</p>`;
+} else {
+    // Returning visit
+    const daysSince = (now - lastVisit) / msToDays;
+    
+    if (daysSince < 1) {
+        visitMessage.innerHTML = `<p>Back so soon! Awesome!</p>`;
+    } else {
+        // Round down to whole days
+        const days = Math.floor(daysSince);
+        const dayWord = days === 1 ? "day" : "days";
+        visitMessage.innerHTML = `<p>You last visited ${days} ${dayWord} ago.</p>`;
+    }
+}
+
+// Store current date for next time
+window.localStorage.setItem('lastVisit-ls', now);
