@@ -1,4 +1,4 @@
-// data/places.mjs
+
 export const places = [
   {
     name: "Central Park",
