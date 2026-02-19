@@ -1,0 +1,439 @@
+/* styles/styles.css - Versión Mejorada */
+
+/* --- VARIABLES & RESET --- */
+:root {
+    --primary: #4CAF50;       /* Verde Principal */
+    --primary-dark: #388E3C;  /* Verde Oscuro (Hover) */
+    --secondary: #FF5722;     /* Naranja Acción */
+    --secondary-dark: #E64A19;/* Naranja Oscuro (Hover) */
+    --text: #333333;          /* Texto Principal */
+    --text-light: #666666;    /* Texto Secundario */
+    --bg: #f4f7f6;            /* Fondo gris muy suave */
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-hover: 0 10px 15px rgba(0,0,0,0.15);
+    --radius: 12px;           /* Bordes redondeados modernos */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    color: var(--primary-dark);
+}
+
+/* --- LAYOUT PRINCIPAL --- */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- HEADER & NAVEGACIÓN --- */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky; /* Menú siempre visible al bajar */
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Navegación Escritorio */
+#nav-menu {
+    display: none; /* Se activa con media query o JS en móvil */
+}
+
+#nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+#nav-menu a:hover, #nav-menu a.active {
+    background-color: rgba(255,255,255,0.2);
+}
+
+#menu-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* --- HERO SECTION (HOME) --- */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    /* Un toque visual extra */
+    background-image: radial-gradient(circle at top right, #e8f5e9 0%, transparent 40%);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+/* Botones Principales */
+.cta-button, button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.cta-button {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 87, 34, 0.4);
+}
+
+/* --- BÚSQUEDA (SEARCH PAGE) --- */
+.search-bar {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+#search-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 0 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+#search-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* --- TARJETAS DE RECETAS (GRID) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.recipe-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden; /* Para que la imagen respete el borde */
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: var(--shadow-hover);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Botones dentro de la tarjeta */
+.btn-details, .btn-fav {
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: auto; /* Empuja los botones al fondo */
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.btn-details {
+    background-color: var(--primary);
+    color: white;
+}
+.btn-details:hover { background-color: var(--primary-dark); }
+
+.btn-fav {
+    background-color: #fff;
+    color: #e53935;
+    border: 2px solid #ffebee;
+}
+.btn-fav:hover {
+    background-color: #ffebee;
+}
+
+/* --- MODAL --- */
+dialog {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 0.3s ease-out;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px); /* Efecto borroso detrás */
+}
+
+.modal-content {
+    padding: 2rem;
+    position: relative;
+}
+
+#close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-weight: bold;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close-modal:hover { background-color: #e0e0e0; }
+
+/* --- MODAL (Actualización) --- */
+dialog {
+    /* ... tus estilos anteriores ... */
+    max-height: 80vh; /* Limitar la altura al 80% de la pantalla */
+    overflow: hidden; /* Ocultar lo que sobra del contenedor principal */
+}
+
+.modal-content {
+    /* ... tus estilos anteriores ... */
+    max-height: calc(80vh - 40px); /* Altura máxima menos el padding */
+    overflow-y: auto; /* Añadir scroll vertical si es necesario */
+}
+
+/* Estilo para el resumen dentro del modal */
+.modal-summary {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Opcional: Hacer los enlaces dentro del resumen verdes */
+.modal-summary a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #263238; /* Gris oscuro elegante */
+    color: #cfd8dc;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+footer a { color: var(--primary); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* --- TOAST (NOTIFICACIÓN) --- */
+#toast {
+    visibility: hidden;
+    min-width: 300px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s, bottom 0.4s;
+}
+
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+#toast.success { background-color: var(--primary-dark); border-left: 5px solid #a5d6a7; }
+#toast.error { background-color: #d32f2f; border-left: 5px solid #ef9a9a; }
+
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* Estilos móviles específicos */
+    #nav-menu {
+        position: fixed; /* Pantalla completa en móvil */
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--primary);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transform: translateX(100%); /* Oculto a la derecha */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #nav-menu.open {
+        display: flex;
+        transform: translateX(0); /* Entra deslizándose */
+    }
+    
+    .hero h1 { font-size: 2rem; }
+    
+    .input-group {
+        flex-direction: column; /* Botón debajo del input en móvil */
+    }
+    
+    #search-btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    #menu-btn { display: none; }
+    
+    #nav-menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        padding: 0;
+        transform: none;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+    padding: 2rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}

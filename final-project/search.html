@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for recipes by ingredients.">
+    <title>SmartPlate | Search</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">SmartPlate</div>
+        <button id="menu-btn" aria-label="Open menu">☰</button>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="search.html" class="active">Search Recipes</a>
+            <a href="favorites.html">My Favorites</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-bar">
+            <h1>What's in your kitchen?</h1>
+            <div class="input-group">
+                <input type="text" id="search-input" placeholder="Ex: Chicken, rice, tomato...">
+                <button id="search-btn">Search</button>
+            </div>
+        </section>
+
+        <section id="results-container" class="grid-container">
+            <p>Enter some ingredients to find delicious recipes...</p>
+        </section>
+    </main>
+
+    <dialog id="recipe-modal">
+        <div class="modal-content">
+            <button id="close-modal">X</button>
+            <h2 id="modal-title">Recipe Title</h2>
+            <div id="modal-body">Details here...</div>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2026 SmartPlate Project</p>
+        <p><a href="#">View Demo Video</a></p>
+    </footer>
+</body>
+</html>

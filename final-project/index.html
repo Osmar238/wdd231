@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find healthy recipes with ingredients you already have.">
+    <meta name="author" content="Your Name">
+    <title>SmartPlate | Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">SmartPlate</div>
+        <button id="menu-btn" aria-label="Open menu">☰</button>
+        <nav id="nav-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="search.html">Search Recipes</a>
+            <a href="favorites.html">My Favorites</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Smart Cooking, Healthy Living</h1>
+            <p>Tell us what ingredients you have, and we'll tell you what to cook.</p>
+            <a href="search.html" class="cta-button">Start Now</a>
+        </section>
+
+        <section class="newsletter">
+            <h2>Get Weekly Recipes</h2>
+            <form action="form-reply.html" method="GET">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartPlate Project</p>
+        <p><a href="https://www.loom.com/share/15489cde14ec4cb8984dc05babdabccd" target="video-by-osmar-tutorial">View Demo Video</a></p>
+    </footer>
+</body>
+</html>

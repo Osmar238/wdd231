@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "Lemon Chicken (Local Backup)",
+        "image": "https://spoonacular.com/recipeImages/649495-312x231.jpg",
+        "readyInMinutes": 45,
+        "servings": 4,
+        "summary": "A delicious and healthy dinner option."
+    },
+    {
+        "id": 2,
+        "title": "Caesar Salad",
+        "image": "https://spoonacular.com/recipeImages/637134-312x231.jpg",
+        "readyInMinutes": 15,
+        "servings": 2,
+        "summary": "Classic salad with homemade dressing."
+    }
+]

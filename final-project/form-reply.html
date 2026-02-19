@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | SmartPlate</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SmartPlate</div>
+        <nav>
+            <a href="index.html">Back to Home</a>
+        </nav>
+    </header>
+
+    <main style="text-align: center; padding: 50px;">
+        <h1>Thanks for Subscribing!</h1>
+        <p>We have received your details.</p>
+        <p id="confirmation-msg"></p>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const email = params.get('email');
+        
+        if(name) {
+            document.getElementById('confirmation-msg').textContent = 
+                `Hello ${name}, we'll send recipes to ${email} soon.`;
+        }
+    </script>
+</body>
+</html>
